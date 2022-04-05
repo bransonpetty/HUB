@@ -28,7 +28,9 @@ function tabMapping(currTab) {
 // roomsTab.setAttribute("href", "rooms.html");
 
 
-
+if(window.location.pathname == "/") {
+    window.location.pathname = "/index.html"
+}
 
 if(window.location.pathname == "/index.html") {
     homeTab.style.backgroundColor = "#4E96EA";
