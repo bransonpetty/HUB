@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hub</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <box>
+        <div id="Logo">The HUB</div>
+        <div id="theme">
+            <button id="themeLight">Light Theme</button>
+            <button id="themeDark">Dark Theme</button>
+        </div>
+    </box>
+    <div class="tabs">
+        <button id="home">HOME</button>
+        <button id="rooms">ROOMS</button>
+        <button id="activities">ACTIVITIES</button>
+        <button id="map">MAP</button>
+        <button id="about">ABOUT US</button>
+    </div>
+    <content> 
+        <home id="homeSection">
+            <div id="welcome">
+                <img id="cover" src="cover photo.webp">
+                <div id="small">VISIT A PLACE WHERE</div>
+                <div id="big">HOME IS SOMEWHERE NEW</div>
+            </div>
+            <div class="item2">
+                <img src="hotelRoom1.jpeg">
+            </div>
+            <div class="item3">
+                <div>
+                    Enjoy luxurious comfort when you stay the night in one of our suites. All rooms feature
+                    indoor access, High speed internet connectivity, daily housekeeping, and much more.
+                </div>
+            </div>
+            <div class="item4">
+                <button type="button" onclick="document.getElementById('rooms').click()">Learn More Here</button>
+            </div>
+            <div class="item5">
+            </div>
+
+            <div class="item6">
+                <img src="hiking.jpeg">
+            </div>
+            <div class="item7">
+                <div>
+                    Enjoy luxurious comfort when you stay the night in one of our suites. All rooms feature
+                    indoor access, High speed internet connectivity, daily housekeeping, and much more.
+                </div>
+            </div>
+            <div class="item8">
+                <button type="button" onclick="document.getElementById('activities').click()">Learn More Here</button>
+            </div>
+            <div class="item9"></div>
+
+            <div class="item10">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24353.00848783271!2d-111.71228936463996!3d40.27294983811325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874d9b1eeeb9f5c5%3A0x63523d8413e98aa1!2sUtah%20Valley%20University!5e0!3m2!1sen!2sus!4v1647572187249!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div id="infobuttons">
+                <div class="item11">LOOKING FOR SOMETHING ELSE?</div>
+                <a class="item12">Technology Services
+                    <p>(555) 555-5565 itsupport@hub.com</p>
+                </a>
+                <button type="button" onclick="document.getElementById('about').click()" class="item13">About Us</button>
+                <a class="item14">Contact Us
+                    <p>(555) 555-5555 support@hub.com</p>
+                </a>
+            </div>
+        </home>
+        <rooms id="roomsSection">
+            <div id="room1">
+                <img src="hotelRoom1.jpeg" alt="room1">
+                <br>
+                <button id="king" type="button" onclick="this.innerHTML='Booked'">Book King Suite</button>
+            </div>
+            <div id="room2">
+                <img src="HotelRoom2.jpeg" alt="room2">
+                <br>
+                <button id="queen" type="button" onclick="this.innerHTML='Booked'">Book Queen Suite</button>
+            </div>
+        </rooms>
+        <activities id="activitiesSection">
+            <ul id="activityList">
+                <li>Hiking</li>
+                <li>Boating</li>
+                <li>Cycling</li>
+                <li>Scuba Diving</li>
+                <li>Spa</li>
+                <li>Outdoor Pool</li>
+                <li>Billiards</li>
+                <li>Ping Pong</li>
+                <li>Corn Hole</li>
+                <li>Spelunking</li>
+                <li>And So Much More</li>
+            </ul>
+            <div id="video">
+                <iframe src="https://www.youtube.com/embed/2pT2JVwINvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </activities>
+        <mapTab id="mapSection">
+            <?php
+            echo = "Hello World!";
+            ?>
+            <div class="container">
+                <form action="/action_page.php" method="post">
+                    <ul id="userForm">
+                        <li>
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName">
+                        </li><li>
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName">
+                        </li><li>
+                            <label for="address">Street Address</label>
+                            <input type="text" id="address" name="address">
+                        </li><li>
+                            <label for="state">State</label>
+                            <input type="text" id="state" name="state">
+                        </li><li>
+                            <label for="zip">Zip Code</label>
+                            <input type="number" id="zip" name="zip">
+                        </li><li>
+                            <label for="phone">Cell Phone</label>
+                            <input type="cel" id="phone" name="phone">
+                        </li><li>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </li><li>
+                            <label id="checkList">How did you hear about us?</label>
+                        </li><li>
+                            <input type="checkbox" id="google" name="referal">
+                            <label for="google">Google</label>
+                        </li><li>
+                            <input type="checkbox" id="linkedIn" name="referal">
+                            <label for="linkedIn">LinkedIn</label>
+                        </li><li>
+                            <input type="checkbox" id="newspaper" name="referal">
+                            <label for="newspaper">Newspaper</label>
+                        </li><li>
+                            <label for="comment">Comments</label>
+                            <textarea rows= "4" id="comment" required></textarea>
+                        </li><li>
+                            <button type="submit" id="submitBtn">Submit</button>
+                            <div></div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </mapTab>
+        <about id="aboutSection">
+            <div id="square">
+                <img id="team" src="teamPhoto.jpeg" alt="teamPhoto">
+            </div>
+            <p id="aboutTxt" style="font-size: 20pt; margin: 10px;">
+                Allow us to open up your world with True Hospitality for Good. 
+                Our diverse set of global destinations exist to broaden your choices, 
+                invite you to save or splurge, and encourage you with welcoming
+                experiences at every arrival. Which brand will you choose for 
+                your next getaway? 1927-1956 It all began with an A&W root beer stand. 
+                Founder J. Willard Marriott and his wife, Alice, got their young business 
+                off the ground by quenching people’s thirst during Washington D.C.’s hot, 
+                muggy summers. Good food and good service at a fair price became a guiding 
+                principle for Hot Shoppes restaurants--and for Marriott International as it grew.
+                </p>
+            <div id="margin"></div>
+        </about>
+    </content>
+    <div class="footer">
+        <a class="item15" href="https://goo.gl/maps/VD5XqCdBPsqG9HpD7">800W University Pkwy, Orem, UT 84058 &nbsp</a>
+        <a>•&nbsp 555-555-5555 &nbsp•</a>
+        <a class="item16">&nbsp ©NotARealCopyRight</a>
+    </div>
+    <script src="script.js"></script>
+    <script src="validation.js">
+        $(document).ready(function () {
+            initValidation("#myform");
+        });
+    </script>
+</body>
+</html>
