@@ -595,6 +595,16 @@ form {
     justify-content: flex-end;
 }
 
+#userForm > li > div.errorMsg {
+    text-align: right;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 100px;
+    flex: 1 0 100px;
+    max-width: 250px;
+    height: 20px;
+    justify-content: flex-end;
+}
+
 #userForm > li > input ~ label {
     text-align: left;
 }
@@ -603,6 +613,56 @@ form {
     height: unset;
 }
 
+.errorMsg{
+    color: red;
+    font-size: 14pt;
+}
+
+#thxMsg {
+    display: none;
+    color: green;
+    background-color: white;
+    width: 500px;
+    /* height: 40px; */
+    font-size: 18pt;
+    text-align: center;
+    justify-self: center;
+    margin: auto auto;
+    margin-top: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 1%;
+    padding-left: 1%;
+    border-radius: 8px;
+}
+
+#userForm > li > div {
+    /* display: none; */
+    /* width: auto; */
+    /* display: none; */
+}
+
+/* #checkError {
+    color: red;
+    font-size: 14;
+} */
+
+.errorMsg {
+    display: none;
+}
+
+li > input:not(:placeholder-shown):invalid {
+    border: red 2px solid;
+}
+
+li > input:not(:placeholder-shown):invalid ~ div {
+    /* border: red 2px solid; */
+    display: block;
+}
+
+/* #firstName:invalid {
+    border: red 3px solid;
+} */
 /* #checkList {
     justify-content: flex-start;
     max-width: 300px;

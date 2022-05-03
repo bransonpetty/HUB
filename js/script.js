@@ -7,6 +7,10 @@ such as links and style alteration with mouse hover.
 Changes include altering color scheme for dark mode,
 default theme on load, and altering cover image for
 dark mode. Needs to maintain theme upon switching pages
+
+
+P5 update: I removed a footer style function that wasn't 
+working properly. Put js files into folders
 */
 
 
@@ -138,7 +142,7 @@ dark.addEventListener("click", function(){
 //     }
 // };
 function colorRes() {
-    footer.style.backgroundColor = primaryColor
+    // footer.style.backgroundColor = primaryColor
     for(let j = 0; j < 5; j++) {
         tabs[j].style.backgroundColor = secondaryColor;
         tabs[j].style.color = "white";

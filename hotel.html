@@ -19,7 +19,7 @@
         <button id="home">HOME</button>
         <button id="rooms">ROOMS</button>
         <button id="activities">ACTIVITIES</button>
-        <button id="map">MAP</button>
+        <button id="map">FORM</button>
         <button id="about">ABOUT US</button>
     </div>
     <content> 
@@ -104,54 +104,66 @@
             </div>
         </activities>
         <mapTab id="mapSection">
-            <?php
-            echo = "Hello World!";
-            ?>
             <div class="container">
-                <form action="/action_page.php" method="post">
+                <form id="myform" novalidate>
                     <ul id="userForm">
                         <li>
                             <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" name="firstName">
+                            <input type="text" id="firstName" name="firstName" placeholder= " " pattern="[A-Za-z].{1,}" required="required">
+                            <div id= "fnameError" class="errorMsg">First Name is required</div>
                         </li><li>
                             <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" name="lastName">
+                            <input type="text" id="lastName" name="lastName" placeholder= " " pattern="[A-Za-z].{1,}" required="required">
+                            <div class="errorMsg">Last Name is Required</div>
                         </li><li>
                             <label for="address">Street Address</label>
-                            <input type="text" id="address" name="address">
+                            <input type="text" id="address" name="address" placeholder= " " required="required">
+                            <div class="errorMsg"></div>
+                        </li><li>
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" placeholder= " " required="required">
+                            <div class="errorMsg"></div>
                         </li><li>
                             <label for="state">State</label>
-                            <input type="text" id="state" name="state">
+                            <input type="text" id="state" name="state" placeholder= " " pattern="[A-Z]{2}" required="required">
+                            <div id="errorState" class="errorMsg"></div>
                         </li><li>
                             <label for="zip">Zip Code</label>
-                            <input type="number" id="zip" name="zip">
+                            <input type="text" id="zip" name="zip" placeholder= " " pattern="[0-9]{5}" required="required">
+                            <div class="errorMsg">You must enter a valid Zip Code</div>
                         </li><li>
                             <label for="phone">Cell Phone</label>
-                            <input type="cel" id="phone" name="phone">
+                            <input type="tel" id="phone" name="phone" placeholder= " " pattern="[0-9]{10}" minlength= "5" required="required">
+                            <div class="errorMsg">You must enter a valid phone number</div>
                         </li><li>
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email">
+                            <input type="email" id="email" name="email" placeholder= " " required="required">
+                            <div class="errorMsg">You must enter a valid email</div>
                         </li><li>
                             <label id="checkList">How did you hear about us?</label>
                         </li><li>
-                            <input type="checkbox" id="google" name="referal">
+                            <input type="checkbox" class= "checkbox" id="google" name="referal">
                             <label for="google">Google</label>
                         </li><li>
-                            <input type="checkbox" id="linkedIn" name="referal">
+                            <input type="checkbox" class= "checkbox" id="linkedIn" name="referal">
                             <label for="linkedIn">LinkedIn</label>
                         </li><li>
-                            <input type="checkbox" id="newspaper" name="referal">
+                            <input type="checkbox" class= "checkbox" id="newspaper" name="referal">
                             <label for="newspaper">Newspaper</label>
                         </li><li>
+                            <div id= "checkError" class= "errorMsg">You must select one</div>
+                        </li><li>
                             <label for="comment">Comments</label>
-                            <textarea rows= "4" id="comment" required></textarea>
+                            <textarea rows= "4" id="comment"></textarea>
+                            <div class="errorMsg"></div>
                         </li><li>
                             <button type="submit" id="submitBtn">Submit</button>
                             <div></div>
                         </li>
                     </ul>
                 </form>
-            </div>
+                <div id="thxMsg">Thank you for stopping by!</div>
+            </div>    
         </mapTab>
         <about id="aboutSection">
             <div id="square">
@@ -176,11 +188,8 @@
         <a>•&nbsp 555-555-5555 &nbsp•</a>
         <a class="item16">&nbsp ©NotARealCopyRight</a>
     </div>
-    <script src="script.js"></script>
-    <script src="validation.js">
-        $(document).ready(function () {
-            initValidation("#myform");
-        });
-    </script>
+    <script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/validation.js"></script>
 </body>
 </html>
