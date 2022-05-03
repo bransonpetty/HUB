@@ -288,9 +288,9 @@ tabMapping(currTab);
 // homeTab.addEventListener
 
 
-// if(window.location.pathname == "/") { //This is to declare the default tab upon navigation
-//     window.location.pathname = "/index.html"
-// }
+if(window.location.pathname == "/") { //This is to declare the default tab upon navigation
+    window.location.pathname = "/hotel.html"
+}
 
 // function tabStyle() {    
 //     if(window.location.pathname == "/index.html") { //home tab
